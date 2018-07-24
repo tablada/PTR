@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTR | Home</title>
+    <!--Import Google Icon Font for materialize-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Link to Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Our style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!--Navbar-->
+   <nav class="blue">
+        <div class="navbar-wrapper container z-depth-2">
+          <a href="#" class="brand-logo "><i class="material-icons left">directions_car</i>Parking Ticket Reimbursement</a>
+        </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="card fit z-depth-4">
+          <div class="card-image">
+            <img src="assets/images/parking.jpeg">
+            <span class="card-title"><h1>Login</h1></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12 center-align ">
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-trigger btn-large blue waves-effect waves-light z-depth-4' href='#' data-target='dropdown-button1'><i class="material-icons left">account_circle</i>Users</a>
+          <a class='dropdown-button btn-large blue waves-effect waves-light z-depth-4' href='admin.html' data-target='dropdown-button'><i class="material-icons left">account_circle</i>Admin</a>
+            <!-- Dropdown Structure for User -->
+             <ul id='dropdown-button1' class='dropdown-content'>
+                <!-- load user names from firebase -->
+             </ul>
+        </div>
+      </div>
+    </div>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- Our JS -->
+    <script src="assets/js/common.js"></script>
+</body>
+</html>

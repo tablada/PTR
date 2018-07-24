@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTR | Users</title>
+    <!--Import Google Icon Font for materialize-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Link to Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Our style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body background="assets/images/user.jpg">
+    <!--Navbar-->
+    <nav class="blue">
+      <div class="navbar-wrapper container z-depth-2">
+        <a href="index.html" class="brand-logo "><i class="material-icons left">directions_car</i>Parking Ticket Reimbursement</a>
+      </div>
+    </nav>
+        <div class="container">
+                <div class="row">
+                  <div class="col l12">
+                    <div class="row">
+                      <div class="col l12 m6">
+                        <div class="card z-depth-4 blue lighten-5">
+                          <div class="card-content blue lighten-5">
+                            <span class="card-title responsive-table" id="userName"></span>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Check-In</th>
+                                  <th>Check-Out</th>
+                                  <th>Location</th>
+                                  <th>Rate</th>
+                                  <th>Total Hours</th>
+                                  <th>Status</th>
+                                </tr>
+                              </thead>
+                              <tbody id="tbTickets">
+                                <!-- <tr>
+                                  <td>Check-In D&T</td>
+                                  <td>Check-Out D&T</td>
+                                  <td>FAU Parking Garage</td>
+                                  <td>$3/hr</td>
+                                  <td>8</td>
+                                  <td>Approved</td>
+                                </tr>
+                                <tr>
+                                  <td>Check-In D&T</td>
+                                  <td>Check-Out D&T</td>
+                                  <td>UM Coral Gables Parking</td>
+                                  <td>$5.25/hr</td>
+                                  <td>4</td>
+                                  <td>Pending</td>
+                                </tr>
+                                <tr>
+                                  <td>Check-In D&T</td>
+                                  <td>Check-Out D&T</td>
+                                  <td>Miami International Airport</td>
+                                  <td>$3.50/hr</td>
+                                  <td>2</td>
+                                  <td>Disapproved</td>
+                                </tr>
+                              </tbody> -->
+                            </table>
+                          </div>
+                          <div class="card-action">
+                            <a id='addTicketId' class="btn-large blue waves-effect waves-light z-depth-2" href="#"><i class="material-icons left">add</i>Add Ticket</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <!-- Modal for adding ticket -->
+    <div id="addTicketModal" class="modal">
+            <div id="datetime-container"></div>
+            <form class="modal-content">
+                <h4>Add ticket:</h4>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="ticket_startDate">Start Date</label>
+                        <input id="ticket_startDate" type="text" class="datepicker">
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="ticket_startTime" type="text" class="timepicker">
+                        <label for="ticket_startTime">Start Time</label>
+                    </div>
+                </div> <!-- end of row 1 -->
+                <div class="row">
+                        <div class="input-field col s6">
+                            <label for="ticket_stopDate">Stop Date</label>
+                            <input id="ticket_stopDate" type="text" class="datepicker">
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="ticket_stopTime" type="text" class="timepicker">
+                            <label for="ticket_stopTime">Stop Time</label>
+                        </div>
+                    </div> <!-- end of row 2 -->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input disabled id="ticket_rate" type="text" value="2.00"> <!-- this is a sample value, we need to get this from parkwiz api-->
+                        <label for="ticket_rate">Parking rate ($ x h)</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input  disabled id="ticket_location" type="text" value="sample place name"> <!-- this is a sample value, we need to get this from google geolocation api-->
+                        <label for="ticket_location">Location</label>
+                    </div>
+                </div> <!-- end of third row -->
+                <div class="modal-footer">
+                    <button id="addTicketBtn" type="button" class="btn-floating modal-close"><i class="material-icons">add</i></button>
+                </div> <!-- end of 3rd row -->
+            </form> <!-- end of form -->
+        </div> <!-- end of modal add user -->
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- GoogleMap API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL9pLI8qqXooLR6E5NvjK_qE0vT1oN6IY"></script>
+    <!-- Our JS -->
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/user.js"></script>
+</body>
+</html>
